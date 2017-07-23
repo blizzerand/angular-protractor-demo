@@ -1,0 +1,50 @@
+<div class="view-paste">
+    <button class="text-primary button-text"  (click)="showPaste()"> View Paste </button>
+   <div *ngIf="showPasteModal" id="source-modal" class="modal fade in" style="display: block; padding-right: 15px;" >
+
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <ng-container *ngIf="!editEnabled">
+        
+          <div class="modal-header">
+            <button type="button" class="close" (click)='onClose()' data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"> {{paste.title}} </h4>
+          </div>
+          <div class="modal-body">
+          	<h5> {{paste.language}} </h5>
+      		  <pre><code>{{paste.paste}}</code>
+            </pre>
+      	
+      	  </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" (click)="onClose()" data-dismiss="modal">Close</button>
+            <button type="button" (click) = "onEdit()" class="btn btn-primary">Edit Paste</button>
+            <button type = "button"  (click) = "onDelete()" class="btn btn-danger"> Delete Paste </button>
+
+          </div>
+        </ng-container>
+        <ng-container *ngIf="editEnabled">
+          <div class="modal-header">
+             <button type="button" class="close" (click)='onClose()' data-dismiss="modal" aria-hidden="true">&times;</button>
+             <h4 class="modal-title"> <input *ngIf="editEnabled" name="title" [(ngModel)] = "paste.title"> </h4>
+          </div>
+          <div class="modal-body">
+            <h5>
+                <select name="category"  [(ngModel)]="paste.language">
+                  <option   *ngFor ="let language of languages" value={{language}}> {{language}} </option>
+                </select>
+            </h5>
+
+           <textarea name="paste" [(ngModel)] = "paste.paste">{{paste.paste}} </textarea>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn btn-default" (click)="onClose()" data-dismiss="modal">Close</button>
+             <button type = "button" *ngIf="editEnabled" (click) = "onSave()" class="btn btn-primary"> Save Paste </button>
+             <button type = "button"  (click) = "onDelete()" class="btn btn-danger"> Delete Paste </button>      
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

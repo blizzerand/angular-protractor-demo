@@ -30,7 +30,7 @@ module.exports = function (config) {
     //browsers: ['Chrome','PhantomJS'],
     singleRun: false,
 
-    browsers: ['ChromeNoSandboxHeadless'],
+    browsers: ['Chrome', 'ChromeNoSandboxHeadless'],
 
     customLaunchers: {
      ChromeNoSandboxHeadless: {
