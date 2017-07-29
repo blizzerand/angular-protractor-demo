@@ -6,12 +6,8 @@ import { By } from '@angular/platform-browser';
 import { AppTestingModule } from './app-testing-module';
 import { PastebinComponent } from './pastebin/pastebin.component';
 import { AboutComponent } from './about/about.component';
-import { APP_BASE_HREF } from '@angular/common';
-import { ContactComponent } from './contact/contact.component';
-
-
-
 import { AppComponent } from './app.component';
+import { ContactComponent } from './contact/contact.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -40,10 +36,10 @@ describe('AppComponent', () => {
      a2 = anchorLinks[1];
      a3 = anchorLinks[2];
      
-    console.log(location.path());
+   
      a1.triggerEventHandler("click", {button: 0});
      tick();
-     console.log("Hello", location.path());
+     
      expect(location.path()).toEqual("");
 
      a2.nativeElement.click();
