@@ -7,7 +7,7 @@ This is a simple Pastebin Application built using Angular. This application serv
 Clone the repo and switch to the starter branch. Alternatively, select starter branch and download the zip. The final branch has the final version of the tests. 
 
 ## Running the Application
-Once you are on the starter branch, head to a terminal and run npm install.
+Once you are on the starter branch, head to a terminal and run `npm install`.
 
 Now run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
