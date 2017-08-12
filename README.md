@@ -1,16 +1,16 @@
-# PasteBin Application using Angular
+# End-to-End Tests with Protractor and Angular
 
-This is a simple Pastebin Application built using Angular. This application serves as an introduction to creating Angular application using Test driven development
+This is a simple Pastebin Application built using Angular. This application serves as an introduction to testing using Protractor
 
 ## Running the Application
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Running unit tests
+## Running Protractor Tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io). Chrome and HeadlessChrome are configured to be default
+Run `ng e2e` to execute the tests on Chrome. For more configurations, see protractor.conf.js
 
-## Build
+## How to get started?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Clone the repo and switch to the starter branch. Alternatively, select starter branch and download the zip. The final branch has the final version of the tests. 
 
