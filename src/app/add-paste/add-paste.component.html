@@ -14,7 +14,7 @@
         </div>
         <div class="modal-body">
          <h5> 
-          <select name="category"  [(ngModel)]="newPaste.language" >
+          <select name="language"  [(ngModel)]="newPaste.language" >
             <option  *ngFor ="let language of languages" value={{language}}> {{language}} </option>
           </select>
          </h5>      

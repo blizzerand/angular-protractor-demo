@@ -39,6 +39,7 @@ export class PastebinService {
 	}
 	//deletePaste() creates new pastes 
 	public deletePaste(pastebin: Pastebin): Promise<void> {
+		console.log(pastebin.id)
 		const url = `${this.pastebinUrl}/${pastebin.id}`;
 		return this.http.delete(url, {headers: this.headers})
 			.toPromise()

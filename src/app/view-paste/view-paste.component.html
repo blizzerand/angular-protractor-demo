@@ -12,8 +12,8 @@
             <h4 class="modal-title"> {{paste.title}} </h4>
           </div>
           <div class="modal-body">
-          	<h5> {{paste.language}} </h5>
-      		  <pre><code>{{paste.paste}}</code>
+          	<h5 class="modal-language"> {{paste.language}} </h5>
+      		  <pre class="modal-paste"><code>{{paste.paste}}</code>
             </pre>
       	
       	  </div>
@@ -31,7 +31,7 @@
           </div>
           <div class="modal-body">
             <h5>
-                <select name="category"  [(ngModel)]="paste.language">
+                <select name="language"  [(ngModel)]="paste.language">
                   <option   *ngFor ="let language of languages" value={{language}}> {{language}} </option>
                 </select>
             </h5>

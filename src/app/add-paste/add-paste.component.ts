@@ -25,9 +25,9 @@ export class AddPasteComponent implements OnInit {
   }
   //onSave() pushes the newPaste property into the server
   public onSave():void {
-    this.pasteServ.addPaste(this.newPaste).then( () => {
-
-        this.addPasteSuccess.emit(this.newPaste);
+    this.pasteServ.addPaste(this.newPaste).then( (response) => {
+        
+        this.addPasteSuccess.emit(response);
         this.onClose();
     });
   }
